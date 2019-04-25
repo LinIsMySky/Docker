@@ -1,12 +1,12 @@
 mkdir docker
 cd ./docker
 apt-get update
-apt-get install \
+apt-get -y install \
     apt-transport-https \
     ca-certificates \
     curl \
     gnupg2 \
-    software-properties-common -y
+    software-properties-common
 curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add -
 apt-key fingerprint 0EBFCD88
 add-apt-repository \
@@ -14,7 +14,7 @@ add-apt-repository \
    $(lsb_release -cs) \
    stable"
 apt-get update
-apt-get install docker-ce docker-ce-cli containerd.io -y
+apt-get -y install docker-ce docker-ce-cli containerd.io
 cd ~
 mkdir portainer
 cd ./portainer
