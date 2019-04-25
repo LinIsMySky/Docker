@@ -1,7 +1,7 @@
 mkdir docker
 cd ./docker
 apt-get update
-apt-get -y install \
+apt-get install \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -14,7 +14,7 @@ add-apt-repository \
    $(lsb_release -cs) \
    stable"
 apt-get update
-apt-get -y install docker-ce docker-ce-cli containerd.io
+apt-get install docker-ce docker-ce-cli containerd.io
 cd ~
 mkdir portainer
 cd ./portainer
